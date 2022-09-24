@@ -110,7 +110,7 @@ resource "aws_codepipeline_webhook" "example" {
 
 # github repository webhook
 resource "github_repository_webhook" "example" {
-  repository = "terraform"
+  repository = "terraform-aws-my-project"
 
   configuration {
     url = aws_codepipeline_webhook.example.url
