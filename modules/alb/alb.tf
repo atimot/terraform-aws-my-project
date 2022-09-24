@@ -1,6 +1,7 @@
 # alb log bucket setting
 resource "aws_s3_bucket" "alb_log" {
   bucket = "alb-log-atimot-terraform-aws-my-project"
+  force_destroy = true
 
   tags = {
     Name = "example"

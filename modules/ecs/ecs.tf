@@ -36,4 +36,9 @@ resource "aws_ecs_service" "example" {
   lifecycle {
     ignore_changes = [task_definition]
   }
+
+  depends_on = [
+    aws_ecs_task_definition.example,
+    aws_ecs_cluster.example
+  ]
 }
